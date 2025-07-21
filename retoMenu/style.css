@@ -1,0 +1,212 @@
+/* Importa la fuente Roboto desde Google Fonts con varios pesos */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+/* Variables CSS para mantener los colores y estilos consistentes */
+:root {
+    --bancolombia-blue: #003087;          /* Azul institucional de Bancolombia */
+    --bancolombia-yellow: #FFD100;        /* Amarillo institucional de Bancolombia */
+    --text-dark: #333;                    /* Color de texto principal */
+    --text-light: #666;                   /* Color de texto secundario */
+    --bg-gray-light: #f9f9f9;             /* Fondo general del body */
+    --section-bg-odd: #f0f0f0;            /* Fondo para secciones impares */
+    --section-bg-even: #ffffff;           /* Fondo para secciones pares */
+}
+
+/* Estilos globales para resetear márgenes/padding y aplicar fuente */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Estilos base para el cuerpo de la página */
+body {
+    background-color: var(--bg-gray-light);
+    line-height: 1.6;
+    color: var(--text-dark);
+}
+
+/* Estilo para el encabezado (sticky) */
+.header {
+    background-color: var(--bancolombia-blue);
+    padding: 15px 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Sombra sutil */
+    position: sticky;                     /* Fija en la parte superior */
+    top: 0;
+    z-index: 1000;                        /* Asegura que quede por encima */
+}
+
+/* Navegación principal centrada y alineada */
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Tamaño del logo */
+.main-nav .logo img {
+    height: 45px; /* Ajuste de tamaño del logo */
+}
+
+/* Elimina viñetas de la lista y alinea horizontalmente */
+.main-nav ul {
+    list-style: none;
+    display: flex;
+}
+
+/* Espaciado entre elementos del menú */
+.main-nav ul li {
+    margin-left: 25px;
+}
+
+/* Estilo para los enlaces del menú */
+.main-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1em;
+    padding: 5px 0;
+    transition: color 0.3s ease, border-bottom 0.3s ease; /* Suaviza hover */
+}
+
+/* Estilo para enlaces activos o en hover */
+.main-nav ul li a:hover,
+.main-nav ul li a.active {
+    color: var(--bancolombia-yellow);          /* Cambia el color del texto */
+    border-bottom: 2px solid var(--bancolombia-yellow); /* Subrayado */
+}
+
+/* Contenedor principal del contenido */
+.content {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/* Estilo base para cada sección de la página */
+.page-section {
+    padding: 60px 40px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Sombra suave */
+    scroll-margin-top: 80px; /* Ajuste de posición al hacer scroll (por el header sticky) */
+}
+
+/* Fondo para secciones impares */
+.page-section:nth-child(odd) {
+    background-color: var(--section-bg-odd);
+}
+
+/* Fondo para secciones pares */
+.page-section:nth-child(even) {
+    background-color: var(--section-bg-even);
+}
+
+/* Estilo para los títulos de sección */
+.page-section h2 {
+    color: var(--bancolombia-blue);
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--bancolombia-yellow); /* Línea decorativa */
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+/* Estilo para párrafos dentro de secciones */
+.page-section p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    color: var(--text-dark);
+}
+
+/* Estilo para listas */
+.page-section ul {
+    list-style: disc;
+    margin-left: 25px;
+    margin-bottom: 20px;
+}
+
+/* Estilo para cada ítem de lista */
+.page-section ul li {
+    margin-bottom: 8px;
+    color: var(--text-light);
+}
+
+/* Contenido ficticio para simular scroll */
+.dummy-content {
+    height: 400px; /* Altura para permitir desplazamiento */
+    background: repeating-linear-gradient(
+        45deg,
+        #f0f0f0,
+        #f0f0f0 10px,
+        #e0e0e0 10px,
+        #e0e0e0 20px
+    );
+    border-radius: 5px;
+    margin-top: 30px;
+    opacity: 0.3; /* Opacidad para no destacar demasiado */
+}
+
+/* Cambia patrón para secciones pares */
+.page-section:nth-child(even) .dummy-content {
+    background: repeating-linear-gradient(
+        45deg,
+        #ffffff,
+        #ffffff 10px,
+        #f5f5f5 10px,
+        #f5f5f5 20px
+    );
+}
+
+/* Estilos responsivos para pantallas pequeñas */
+@media (max-width: 768px) {
+    .header {
+        padding: 10px 20px; /* Menor padding en móviles */
+    }
+
+    .main-nav {
+        flex-direction: column; /* Menú vertical */
+        align-items: flex-start;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .main-nav ul li {
+        margin: 5px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .main-nav ul li a {
+        display: block;
+        padding: 10px 0;
+        border-bottom: none;
+    }
+
+    .main-nav ul li a:hover,
+    .main-nav ul li a.active {
+        background-color: rgba(255, 255, 255, 0.1); /* Fondo en hover */
+        border-radius: 4px;
+        color: var(--bancolombia-yellow);
+    }
+
+    .content {
+        padding: 0 15px;
+    }
+
+    .page-section {
+        padding: 40px 20px;
+        scroll-margin-top: 180px; /* Mayor margen por posible header más alto en móvil */
+    }
+
+    .page-section h2 {
+        font-size: 1.8em; /* Títulos más pequeños */
+    }
+}
