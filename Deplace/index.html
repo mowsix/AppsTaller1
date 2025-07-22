@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Configuración de codificación y viewport -->
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    
+    <!-- Título de la pestaña -->
+    <title>Deplace Mason</title>
+    
+    <!-- Inclusión de Tailwind CSS desde CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Fuentes de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Teko:wght@400;700&display=swap" rel="stylesheet"/>
+    
+    <!-- Íconos de Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    
+    <!-- Estilos personalizados -->
+    <style>
+        body {
+            background-color: #F8F4EC;
+            font-family: 'Roboto Condensed', sans-serif;
+            color: #1A1A1A;
+        }
+        .font-teko {
+            font-family: 'Teko', sans-serif;
+        }
+        .vertical-text {
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+        }
+        .marquee {
+            white-space: nowrap;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+        .marquee span {
+            display: inline-block;
+            padding-left: 100%;
+            animation: marquee 15s linear infinite;
+        }
+        @keyframes marquee {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(-100%, 0); }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Contenedor principal -->
+<div class="relative min-h-screen">
+
+    <!-- Encabezado del sitio -->
+    <header class="absolute top-0 left-0 right-0 p-8 flex justify-between items-center z-10">
+        <!-- Texto vertical a la izquierda -->
+        <div class="vertical-text uppercase tracking-widest text-lg font-bold">Deplace Mason</div>
+        
+        <!-- Centro con nombre de la marca -->
+        <div class="text-center">
+            <div class="text-xs uppercase">Deplace</div>
+            <a class="text-lg font-bold" href="#">MASON</a>
+        </div>
+        
+        <!-- Enlace al carrito -->
+        <a class="text-xs" href="#">CART 0</a>
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="pt-32">
+        <!-- Títulos grandes centrados -->
+        <div class="text-center">
+            <h1 class="font-teko text-[10rem] md:text-[14rem] lg:text-[18rem] leading-none tracking-tighter">SPRING,</h1>
+            <h2 class="font-teko text-[10rem] md:text-[14rem] lg:text-[18rem] leading-none tracking-tighter -mt-12 md:-mt-20 lg:-mt-28">
+                SUMMER <span class="italic">Coll.</span>
+            </h2>
+            <p class="font-teko text-9xl -mt-12 md:-mt-16 lg:-mt-24">20</p>
+        </div>
+
+        <!-- Imágenes de modelos con estilos -->
+        <div class="flex justify-center items-center space-x-4 md:space-x-8 mt-8 px-4">
+            <!-- Imagen 1 -->
+            <div class="relative">
+                <img class="w-full max-w-sm border-2 border-black" src="URL_IMAGEN_1" alt="Model wearing yellow pants and white sneakers"/>
+                <div class="absolute bottom-2 left-2 text-xs">
+                    <span class="bg-[#F8F4EC] px-1">UTO</span>
+                    <span class="bg-[#F8F4EC] px-1 ml-2">MAN</span>
+                </div>
+            </div>
+
+            <!-- Imagen 2 -->
+            <div class="relative">
+                <img class="w-full max-w-sm border-2 border-black" src="URL_IMAGEN_2" alt="Model wearing orange pants and white sneakers"/>
+                <div class="absolute bottom-2 left-2 text-xs">
+                    <span class="bg-[#F8F4EC] px-1">UTO</span>
+                    <span class="bg-[#F8F4EC] px-1 ml-2">WMNS</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Botón Explore -->
+        <div class="flex justify-end items-center mt-8 pr-16">
+            <a class="flex items-center space-x-2 text-sm uppercase tracking-wider" href="#">
+                <span>Explore</span>
+                <span class="material-icons border-2 border-black rounded-full p-1 text-2xl">arrow_forward</span>
+            </a>
+        </div>
+    </main>
+
+    <!-- Sección tipo marquesina en movimiento -->
+    <div class="bg-yellow-400 text-black py-4 mt-16 marquee">
+        <span class="text-2xl font-bold uppercase">
+            DEPLACE SHOP • DO NOT SCROLL • (repetido)
+        </span>
+    </div>
+
+    <!-- Sección de descripción -->
+    <section class="py-16 px-4 md:px-8 lg:px-16">
+        <div class="max-w-3xl mx-auto text-center">
+            <p class="text-xs uppercase tracking-widest">Who we are</p>
+            <h3 class="text-3xl md:text-4xl font-light mt-4 leading-snug">
+                An independent brand of urban trekking shoes and accessories...
+            </h3>
+        </div>
+    </section>
+
+    <!-- Catálogo de productos destacados -->
+    <section class="px-4 md:px-8 lg:px-16 pb-16">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+            <!-- Producto 1 -->
+            <div class="bg-[#E4D7C3] p-4 text-center border-2 border-black">
+                <img class="mx-auto mb-4" src="URL_PRODUCTO_1" alt="Cactus shoe"/>
+                <div class="text-xs text-white bg-black inline-block px-2 py-1">UNISEX</div>
+                <h4 class="font-teko text-5xl mt-2">CACTUS</h4>
+                <p class="text-sm">TREKKING</p>
+                <p class="text-lg font-bold">€ 180 EUR</p>
+            </div>
+            <!-- Producto 2 -->
+            <div class="bg-[#E4D7C3] p-4 text-center border-2 border-black">
+                <img class="mx-auto mb-4" src="URL_PRODUCTO_2" alt="Duran shoe"/>
+                <div class="text-xs text-white bg-black inline-block px-2 py-1">UNISEX</div>
+                <h4 class="font-teko text-5xl mt-2">DURAN</h4>
+                <p class="text-sm">RUNNING</p>
+                <p class="text-lg font-bold">€ 144 EUR</p>
+            </div>
+            <!-- Producto 3 -->
+            <div class="bg-[#E4D7C3] p-4 text-center border-2 border-black">
+                <img class="mx-auto mb-4" src="URL_PRODUCTO_3" alt="The Eve shoe"/>
+                <div class="text-xs text-white bg-black inline-block px-2 py-1">UNISEX</div>
+                <h4 class="font-teko text-5xl mt-2">THE EVE</h4>
+                <p class="text-sm">RUNNING</p>
+                <p class="text-lg font-bold">€ 144 EUR</p>
+            </div>
+            <!-- Producto 4 -->
+            <div class="bg-[#E4D7C3] p-4 text-center border-2 border-black">
+                <img class="mx-auto mb-4" src="URL_PRODUCTO_4" alt="Carnera shoe"/>
+                <div class="text-xs text-white bg-black inline-block px-2 py-1">UNISEX</div>
+                <h4 class="font-teko text-5xl mt-2">CARNERA</h4>
+                <p class="text-sm">RUNNING</p>
+                <p class="text-lg font-bold">€ 144 EUR</p>
+            </div>
+        </div>
+
+        <!-- Botón Shop All -->
+        <div class="flex justify-end items-center mt-8">
+            <a class="flex items-center space-x-2 text-sm uppercase tracking-wider" href="#">
+                <span>Shop all</span>
+                <span class="material-icons border-2 border-black rounded-full p-1 text-2xl">arrow_forward</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Cita destacada con firma -->
+    <section class="py-16 px-4 md:px-8 lg:px-16 flex justify-center items-center">
+        <div class="flex flex-col md:flex-row items-center gap-8 md:gap-16 max-w-4xl">
+            <img class="h-8" src="URL_FIRMA" alt="William Gibson signature"/>
+            <p class="text-lg font-light leading-relaxed text-center md:text-left">
+                "Good things come to those who wait..."
+            </p>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="px-4 md:px-8 lg:px-16 py-16 border-t border-black">
+        <div class="flex flex-col md:flex-row justify-between">
+            
+            <!-- Suscripción al newsletter -->
+            <div class="w-full md:w-1/3 mb-8 md:mb-0">
+                <p class="text-xs uppercase tracking-widest flex items-center">
+                    <span class="material-icons text-lg mr-2">email</span>
+                    Subscribe to newsletter
+                </p>
+                <form class="mt-4">
+                    <label class="text-xs" for="email">Subscribe to our newsletter</label>
+                    <div class="flex items-center mt-2 border-b border-black pb-2">
+                        <input type="email" id="email" placeholder="E-mail address" class="bg-transparent w-full focus:outline-none"/>
+                        <button type="submit" class="uppercase text-xs font-bold">Submit</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Enlaces de información -->
+            <div class="w-full md:w-1/3 flex justify-start md:justify-center mb-8 md:mb-0">
+                <div>
+                    <p class="text-xs uppercase tracking-widest">Info</p>
+                    <ul class="mt-4 space-y-2 text-lg">
+                        <li><a href="#" class="hover:underline">FAQ</a></li>
+                        <li><a href="#" class="hover:underline">Returns</a></li>
+                        <li><a href="#" class="hover:underline">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="ml-16">
+                    <p class="text-xs uppercase tracking-widest">Policy</p>
+                    <ul class="mt-4 space-y-2 text-lg">
+                        <li><a href="#" class="hover:underline">Terms</a></li>
+                        <li><a href="#" class="hover:underline">Privacy</a></li>
+                        <li><a href="#" class="hover:underline">Cookie</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Botón para volver arriba -->
+            <div class="w-full md:w-1/3 flex justify-start md:justify-end items-start">
+                <button class="border-2 border-black rounded-full p-2">
+                    <span class="material-icons text-2xl">arrow_upward</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Créditos finales -->
+        <div class="mt-16 flex flex-col md:flex-row justify-between items-center text-xs">
+            <p class="uppercase tracking-widest mb-4 md:mb-0">Credits</p>
+            <p class="mb-4 md:mb-0">© 2020 DEPLACE MASON</p>
+            <div class="flex items-center space-x-4">
+                <a href="#">
+                    <img src="URL_FACEBOOK_ICON" alt="facebook icon" class="h-8"/>
+                </a>
+            </div>
+        </div>
+    </footer>
+</div>
+
+</body>
+</html>
