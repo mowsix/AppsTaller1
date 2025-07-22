@@ -1,0 +1,46 @@
+
+:root {
+    --brown: #3D3D3D;
+    --yellow: #FFC700;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.yellow-bg {
+    background-color: var(--yellow);
+}
+
+.text-brown {
+    color: var(--brown);
+}
+
+.header-link {
+    text-decoration: none;
+    color: var(--brown);
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--brown);
+    border-radius: 9999px;
+    font-size: 0.875rem;
+}
+
+.header-link:hover {
+    background-color: var(--brown);
+    color: white;
+}
+
+.rotated-text {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+}
+
+.btn-border {
+    border: 2px solid black;
+    border-radius: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 10px;
+}
