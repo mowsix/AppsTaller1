@@ -1,5 +1,5 @@
 // Importar usando ES Modules
-import Calculadora, { sumar, restar, multiplicar, dividir } from './calculadora.js';
+import Calculadora, { sumar, restar, multiplicar, dividir } from './calculadora.mjs';
 
 console.log('=== CALCULADORA CON ES MODULES ===\n');
 
